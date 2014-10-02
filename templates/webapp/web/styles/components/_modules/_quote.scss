@@ -10,12 +10,10 @@
   @include type--medium;
   padding-top: $lineHeight * 4;
   padding-left: $lineHeight;
-
   @include medium {
     padding-top: $lineHeight * 2;
     padding-left: 0;
   }
-
   p {
     border-top: 1px solid $colorGrayKeyline;
     text-align: right;
@@ -23,7 +21,6 @@
     margin-top: $lineHeight/2 - 1;
     padding-top: $lineHeight/2;
   }
-
   &::before {
     content: open-quote;
     display: block;
@@ -34,7 +31,6 @@
     top: 90px;
     left: $lineHeight;
     font-size: 260px;
-
     @include medium {
       top: 225px;
       left: -210px;

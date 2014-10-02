@@ -10,14 +10,11 @@
   & .guides-list__item .secondary-content {
     display: none;
   }
-
   & .primary-content {
     padding-top: $lineHeight;
     padding-bottom: $lineHeight*2;
-
     p {
       margin-top: 0;
     }
   }
-
 }

@@ -7,13 +7,10 @@
 @import '_utils';
 @import '_normalize';
 @import '_global';
-
 // Icons - Leave it here to otherfiles can extend if needed
 @import '_components/_icons';
-
 // Color Palette
 @import '_palette';
-
 // Modules
 @import '_modules/_highlight';
 @import '_modules/_editorial-header';
@@ -30,7 +27,6 @@
 @import '_modules/_did-you-know';
 @import '_modules/_toc';
 @import '_modules/_next-lessons';
-
 // Components
 @import '_components/_grid';
 @import '_components/_typography';
@@ -44,13 +40,10 @@
 @import '_components/_articles-list';
 @import '_components/_guides-list';
 @import '_components/_icon-circle';
-
 // Themed styles
 @import '_themed';
-
 // Pages
 @import '_pages/_styleguide';
 @import '_pages/_page-resources';
-
 // Make sure this is last to override anything else :)
 @import '_helper';

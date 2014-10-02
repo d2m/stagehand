@@ -10,17 +10,12 @@
   margin-bottom: $lineHeight / 2;
   margin-top: $lineHeight / 2;
   min-height: $lineHeight;
-
   text-align: center;
-
   font-family: $fontHighlight;
   font-weight: 600;
   text-decoration: none;
-
   outline: 0;
-
   transition: none;
-
   &:hover {
     background: #4d4d4d;
     color: #ffffff;
@@ -28,28 +23,21 @@
     text-decoration: none;
   }
 }
-
 // Mixin to create buttons
 @mixin style-button($color, $textColor, $isInverted: false) {
-
   background: $color;
   color: $textColor;
   border: 1px solid darken($color, 10%);
-
   @if $isInverted { border-color: transparent;}
 }
-
-
 .button--primary {
   @extend .button;
   @include style-button(#4285f4, #ffffff);
 }
-
 .button--secondary {
   @extend .button;
   @include style-button(#ffffff, $colorBlue);
 }
-
 .button--secondary-variation {
   @extend .button;
   @include style-button(#ffffff, $colorBlue, true);

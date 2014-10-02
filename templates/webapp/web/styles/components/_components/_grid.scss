@@ -4,7 +4,6 @@
 *
 **/
 
-
 @include medium-only {
   // Generating grid classes for medium view
   @for $i from 1 through $mediumColCount {
@@ -13,7 +12,6 @@
       width: ($mediumColWidth*$i) + ($mediumGutterWidth*($i + -1));
       @if $i == $mediumColCount { margin-right: 0; }
     }
-
     @if $i < $mediumColCount {
       .g-medium--push-#{$i} {
         margin-left: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
@@ -23,31 +21,24 @@
       }
     }
   }
-
   .g-medium--full {
     @include rule--col(medium);
     margin-right: 0;
     width: 100%;
   }
-
   .g--third {
     @include rule--col(medium);
     width: $mediumColWidth;
   }
-
   .g--half,
   .g-medium--half {
     @include rule--col(medium);
     width: 50% - $mediumGutterWidth/2;
   }
-
   .g-medium--last { margin-right: 0; }
   .g-medium--last + .g-medium--half { clear: left; }
-
   .g--pull-half { margin-right: 50% + $mediumGutterWidth/2; }
 }
-
-
 @include wide {
   // Generating grid classes for wide view
   @for $i from 1 through $wideColCount {
@@ -56,7 +47,6 @@
       width: ($wideColWidth*$i) + ($wideGutterWidth*($i + -1));
       @if $i == $wideColCount { margin-right: 0; }
     }
-
     @if $i < $wideColCount {
       .g-wide--push-#{$i} {
         margin-left: ($wideColWidth*$i) + ($wideGutterWidth*$i);
@@ -66,30 +56,23 @@
       }
     }
   }
-
   .g-wide--last { margin-right: 0; }
-
   .g-wide--full {
     @include rule--col(wide);
     margin-right: 0;
     width: 100%;
   }
-
   .g--third {
     @include rule--col(wide);
     width: 30.8%;
   }
-
   .g--half,
   .g-wide--half {
     @include rule--col(wide);
     width: 50% - $wideGutterWidth/2;
   }
-
   .g--pull-half { margin-right: 50% + $wideGutterWidth/2; }
 }
-
-
 // This is a global 'last' class
 // to be used with global grid classes, such as 'half' or 'third'
 // Example usage:
@@ -97,27 +80,21 @@
 //  <div class="third"></div>
 //  <div class="third last"></div>
 .g--last { margin-right: 0; }
-
-
 // This is a global 'centered' class
 .g--centered {
   float: none; // reset float to none so we can center it
   margin-left: auto;
   margin-right: auto;
 }
-
 // This is a grid overlay
 // Its purpose is to show users our grid system
 // It becomes visible when a class 'debug' is added to the body
 .grid-overlay {
-
   display: none;
   pointer-events: none;
-
   // Only show when parents (body) has debug class
   .debug & {
     @include container(true);
-
     position: absolute;
     top: 0;
     bottom: 0;
@@ -125,18 +102,15 @@
     right: 0;
     height: 100%;
     display: block;
-
     [class*="g-"] {
       height: 100%;
       background-color: rgba(lighten(#000, 35%), .2);
     }
-
     @include medium-only {
       .g-wide--last {
         display: none;
       }
     }
-
     @include small-only {
       display: none;
     }

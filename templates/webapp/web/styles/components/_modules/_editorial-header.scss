@@ -6,20 +6,15 @@
 
 .editorial-header {
   overflow: hidden;
-
   .breadcrumbs {
     color: $colorBlue;
-
     a {
       color: $colorBlue;
     }
   }
-
   .container {
-
     @include medium {
       position: relative;
-
       // Pseudo elements to add the background characters
       &::before {
         content: $icon-chevron-large;
@@ -35,18 +30,14 @@
       }
     }
   }
-
 }
-
 .editorial-header__excerpt {
   @include type--medium(true);
   font-family: $fontHighlight;
 }
-
 .editorial-header .tag{
   padding-top: $lineHeight*2;
 }
-
 .editorial-header__subtitle {
   @include type--xxlarge;
   padding-top: 0;
@@ -56,19 +47,15 @@
   }
   color: $colorBlue;
 }
-
 .editorial-header__toc {
   margin-top: $lineHeight;
-
   ol {
     padding-top: 0;
-
     @include medium {
       padding-top: 0;
     }
   }
 }
-
 .editorial-header__toc-title {
   font-family: $fontHighlight;
   border-bottom: 1px solid $colorGrayKeyline;
